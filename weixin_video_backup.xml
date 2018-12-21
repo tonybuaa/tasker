@@ -1,1 +1,40 @@
+<!--
+    A1: List Files [ Dir:tencent/MicroMsg/93ae55b313b8c874fafff1226ccedff9/video Match:*.mp4 
+        Include Hidden Files:Off Use Root:Off Sort Select:Alphabetic Variable:%FILES ]
+    A2: For [ Variable:%FILES Items:%FILES() ]
+    A3: Copy File [ From:%FILES To:wxbak Use Root:Off ]
+    A4: End For
+-->
 
+<TaskerData sr="" dvi="1" tv="5.6">
+    <Task sr="task4">
+        <cdate>1545359439687</cdate>
+        <edate>1545361071713</edate>
+        <id>4</id>
+        <nme>weixin video backup</nme>
+        <pri>100</pri>
+        <Action sr="act0" ve="7">
+            <code>412</code>
+            <Str sr="arg0" ve="3">tencent/MicroMsg/93ae55b313b8c874fafff1226ccedff9/video</Str>
+            <Str sr="arg1" ve="3">*.mp4</Str>
+            <Int sr="arg2" val="0"/>
+            <Int sr="arg3" val="0"/>
+            <Int sr="arg4" val="0"/>
+            <Str sr="arg5" ve="3">%FILES</Str>
+        </Action>
+        <Action sr="act1" ve="7">
+            <code>39</code>
+            <Str sr="arg0" ve="3">%FILES</Str>
+            <Str sr="arg1" ve="3">%FILES()</Str>
+        </Action>
+        <Action sr="act2" ve="7">
+            <code>404</code>
+            <Str sr="arg0" ve="3">%FILES</Str>
+            <Str sr="arg1" ve="3">wxbak</Str>
+            <Int sr="arg2" val="0"/>
+        </Action>
+        <Action sr="act3" ve="7">
+            <code>40</code>
+        </Action>
+    </Task>
+</TaskerData>
